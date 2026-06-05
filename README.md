@@ -29,8 +29,7 @@ anomaly-detection/
 │   ├── ensemble_model.ipynb          # simple AND ensemble
 │   ├── best_unsupervised.ipynb       # cascading ensemble (the headline result)
 │   └── final_comparison.ipynb        # all models side by side
-├── README.md
-└── PROJECT_SUMMARY.md             # detailed project journey
+└── README.md
 ```
 
 ## Setup
