@@ -1,4 +1,4 @@
-# ML-Based Anomaly Detection in System Monitoring
+# ML-Based Anomaly Detection in Digital System Monitoring
 
 **Bachelor's thesis project** — Anri Sitchinava & Tinatin Tavadze
 
