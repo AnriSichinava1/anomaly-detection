@@ -8,7 +8,7 @@ This project replaces traditional static-threshold monitoring with machine learn
 
 | | F1 | Recall | Precision |
 |---|---|---|---|
-| **Cascading Ensemble (unsupervised)** | **0.74** | **81%** | 68% |
+| **Cascading Ensemble (unsupervised)** | **0.73** | **81%** | 68% |
 | Random Forest (supervised) | 0.83 | 72% | 98% |
 
 The unsupervised ensemble reaches **89% of the supervised performance ceiling without requiring any labels** during training, making it deployable on any new system with zero labeling effort.
@@ -47,9 +47,9 @@ jupyter lab
 ## Recommended Reading Order
 
 1. **`isolation_forest_model.ipynb`** — establishes the core problem (static thresholds fail) and demonstrates the first ML solution.
-2. **`lof_model.ipynb`** — best single unsupervised model (F1 = 0.69).
+2. **`lof_model.ipynb`** — Local Outlier Factor, density-based detection (F1 = 0.35).
 3. **`random_forest_model.ipynb`** — supervised baseline defining the performance ceiling (F1 = 0.83).
-4. **`best_unsupervised.ipynb`** — cascading ensemble combining four models with smart thresholding (F1 = 0.74, the headline result).
+4. **`best_unsupervised.ipynb`** — cascading ensemble combining four models with smart thresholding (F1 = 0.73, the headline result).
 5. **`final_comparison.ipynb`** — all models in one place with comparison plots and summary.
 
 Two supporting notebooks (`ocsvm_model.ipynb`, `ensemble_model.ipynb`) cover alternative approaches and motivate the design of the cascading ensemble.
@@ -89,7 +89,7 @@ All key notebooks include a statsmodels logistic regression analysis providing P
 A tiered approach based on data availability:
 
 - **Tier 1 (critical systems):** train Random Forest where labeled incident data is available — F1 = 0.83
-- **Tier 2 (general fleet):** deploy the unsupervised cascading ensemble — F1 = 0.74, no labels needed, generalizes to any new system
+- **Tier 2 (general fleet):** deploy the unsupervised cascading ensemble — F1 = 0.73, no labels needed, generalizes to any new system
 
 ## Authors
 
